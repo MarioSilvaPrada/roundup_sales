@@ -1,26 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+import { client } from './ContentfulClient';
+
+const App = () => {
+  const [ data, setData ] = useState({});
+  const [ isLoading, setIsLoading ] = useState(true);
+
+  useEffect(() => {
+    // client.getEntries().then((entries) => {
+    //   setData(entries);
+    //   setIsLoading(false);
+    // });
+
+    client.getEntry('7nAVhgvNaAAtay77brCEC9').then(function(entry) {
+      // logs the entry metadata
+      setData(entry.fields);
+      setIsLoading(false);
+    });
+  });
+
+  return isLoading ? (
+    <div className='App'>
+      <h1>Loading</h1>
+    </div>
+  ) : (
+    <div className='App'>
+      <h1>{data.title}</h1>
+      <p>{data.textSection}</p>
+      <img src={data.image.fields.file.url} />
     </div>
   );
-}
+};
 
 export default App;
