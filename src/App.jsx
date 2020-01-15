@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 
+import wave from './assets/wave.svg';
+
 import { client } from './ContentfulClient';
 
 const App = () => {
@@ -29,6 +31,10 @@ const App = () => {
       <h1>{data.title}</h1>
       <p>{data.textSection}</p>
       <img src={data.image.fields.file.url} />
+     <div className='section'>
+        <img className='wave' src={wave} />
+        <div className='devision' />
+     </div>
     </div>
   );
 };
