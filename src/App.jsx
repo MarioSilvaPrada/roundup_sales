@@ -5,16 +5,27 @@ import * as S from './App.styled';
 
 import Wave from './components/Wave';
 import Header from './components/Header/Header';
+import WelcomeSection from './components/WelcomeSection/WelcomeSection';
 
 import { BLUE } from './config/style';
 
 const App = () => {
   const [ data, setData ] = useState({});
+  const [ headerData, setHeaderData ] = useState({});
+  const [ welcomeData, setWelcomeData ] = useState({});
   const [ isLoading, setIsLoading ] = useState(true);
 
   useEffect(() => {
     client.getEntries().then((entries) => {
-      setData(entries);
+      entries.items.map(function(entry) {
+        if (entry.fields.title === 'Header') {
+          setHeaderData(entry.fields);
+        } else if (entry.fields.title === 'Welcome Section') {
+          setWelcomeData(entry.fields);
+        } else {
+          setData(entry);
+        }
+      });
       setIsLoading(false);
     });
 
@@ -22,21 +33,24 @@ const App = () => {
     //   setData(entry.fields);
     //   setIsLoading(false);
     // });
-  });
+  }, []);
 
-  return isLoading ? (
-    <div className='App'>
-      <h1>Loading</h1>
-    </div>
-  ) : (
-    <div className='App'>
-      <Header />
+  return (
+    <S.StyledApp>
+      {isLoading ? (
+        <h1>Loading</h1>
+      ) : (
+        <div>
+          <Header data={headerData} />
+          <WelcomeSection data={welcomeData}/>
 
-      <div className='section'>
-        <Wave fill={BLUE} style={{marginBottom: '-5px'}}/>
-        <S.StyledFooter color={BLUE}>teste</S.StyledFooter>
-      </div>
-    </div>
+          <div className='section'>
+            <Wave fill={BLUE} style={{ marginBottom: '-5px' }} />
+            <S.StyledFooter color={BLUE}>teste</S.StyledFooter>
+          </div>
+        </div>
+      )}
+    </S.StyledApp>
   );
 };
 
