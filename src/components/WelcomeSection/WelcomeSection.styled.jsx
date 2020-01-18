@@ -1,10 +1,14 @@
 import styled from 'styled-components';
+import { MAX_WIDTH } from '../../config/style';
 
-export const StyledContainer = styled.div`
+export const StyledContainer = styled.div`padding: 2rem;`;
+
+export const StyledWelcomeContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem;
+  max-width: ${MAX_WIDTH};
+  margin:0 auto;
 `;
 
 export const StyledContent = styled.div`
