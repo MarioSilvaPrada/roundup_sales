@@ -1,8 +1,8 @@
 import React from 'react';
-import * as S from './WelcomeSection.styled';
-import { BLUE } from '../../config/style';
+import * as S from 'components/WelcomeSection/WelcomeSection.styled';
+import { BLUE } from 'config/style';
 
-import Button from '../Button/Button';
+import Button from 'components/Button/Button';
 
 const WelcomeSection = ({ data }) => {
   return (

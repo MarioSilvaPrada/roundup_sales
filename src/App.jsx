@@ -3,11 +3,11 @@ import { client } from './ContentfulClient';
 
 import * as S from './App.styled';
 
-import Wave from './components/Wave';
-import Header from './components/Header/Header';
-import WelcomeSection from './components/WelcomeSection/WelcomeSection';
+import Wave from 'components/Wave';
+import Header from 'components/Header/Header';
+import WelcomeSection from 'components/WelcomeSection/WelcomeSection';
 
-import { BLUE } from './config/style';
+import { BLUE } from 'config/style';
 
 const App = () => {
   const [ data, setData ] = useState({});

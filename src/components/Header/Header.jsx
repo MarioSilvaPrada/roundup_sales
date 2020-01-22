@@ -11,7 +11,7 @@ const Header = ({ data }) => {
         <S.StyledLeftHeader>
           <S.StyledLogo src={data.logo.fields.file.url} />
           <S.StyledNavBar>
-            {data.link.map((link) => <S.StyledLink>{link}</S.StyledLink>)}
+            {data.link.map((link) => <S.StyledLink key={link}>{link}</S.StyledLink>)}
           </S.StyledNavBar>
         </S.StyledLeftHeader>
         <Button background={BLUE}>{data.buttonText}</Button>
