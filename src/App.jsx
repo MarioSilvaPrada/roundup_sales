@@ -3,9 +3,10 @@ import { client } from './ContentfulClient';
 
 import * as S from './App.styled';
 
-import Wave from 'components/Wave';
+import Wave from 'assets/svg/Wave';
 import Header from 'components/Header/Header';
 import WelcomeSection from 'components/WelcomeSection/WelcomeSection';
+import SectionTitle from 'components/SectionTitle/SectionTitle';
 
 import { BLUE } from 'config/style';
 
@@ -13,15 +14,19 @@ const App = () => {
   const [ data, setData ] = useState({});
   const [ headerData, setHeaderData ] = useState({});
   const [ welcomeData, setWelcomeData ] = useState({});
+  const [ sectionTitle, setSectionTitle ] = useState({});
   const [ isLoading, setIsLoading ] = useState(true);
 
   useEffect(() => {
     client.getEntries().then((entries) => {
+      console.log(entries.items);
       entries.items.map(function(entry) {
         if (entry.fields.title === 'Header') {
           setHeaderData(entry.fields);
         } else if (entry.fields.title === 'Welcome Section') {
           setWelcomeData(entry.fields);
+        } else if (entry.fields.title === 'sectionTitle1') {
+          setSectionTitle(entry.fields);
         } else {
           setData(entry);
         }
@@ -42,12 +47,13 @@ const App = () => {
       ) : (
         <div>
           <Header data={headerData} />
-          <WelcomeSection data={welcomeData}/>
+          <WelcomeSection data={welcomeData} />
+          <SectionTitle data={sectionTitle}/>
 
-          <div className='section'>
+          {/* <div className='section'>
             <Wave fill={BLUE} style={{ marginBottom: '-5px' }} />
             <S.StyledFooter color={BLUE}>teste</S.StyledFooter>
-          </div>
+          </div> */}
         </div>
       )}
     </S.StyledApp>
