@@ -7,6 +7,7 @@ import Wave from 'assets/svg/Wave';
 import Header from 'components/Header/Header';
 import WelcomeSection from 'components/WelcomeSection/WelcomeSection';
 import SectionTitle from 'components/SectionTitle/SectionTitle';
+import InfoSection from 'components/InfoSection/InfoSection';
 
 import { BLUE } from 'config/style';
 
@@ -48,7 +49,8 @@ const App = () => {
         <div>
           <Header data={headerData} />
           <WelcomeSection data={welcomeData} />
-          <SectionTitle data={sectionTitle}/>
+          <SectionTitle data={sectionTitle} />
+          <InfoSection />
 
           {/* <div className='section'>
             <Wave fill={BLUE} style={{ marginBottom: '-5px' }} />
