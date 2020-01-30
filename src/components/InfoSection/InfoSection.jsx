@@ -36,8 +36,8 @@ const InfoSection = () => {
           context and goals. From then on, we'll build a tailored project and timeline for your
           company.
         </S.StyledDescription>
-        {content.map((cont) => (
-          <S.Content>
+        {content.map((cont, i) => (
+          <S.Content reverse={i % 2}>
             <S.StyledImg src={cont.img} />
             <S.Bullets>
               <h1>{cont.title}</h1>

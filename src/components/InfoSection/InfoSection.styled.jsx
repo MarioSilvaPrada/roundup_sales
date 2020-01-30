@@ -26,17 +26,23 @@ export const Wrapper = styled.div`
   margin-bottom: 2.5rem;
 `;
 
-export const StyledImg = styled.img`
-    width: 20rem;
-`
+export const StyledImg = styled.img`width: 20rem;`;
 export const Content = styled.div`
-    display: flex;
-    align-items: center;
-`
+  display: flex;
+  ${(props) => props.reverse && 'flex-direction: row-reverse'};
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+`;
 
 export const Bullets = styled.div`
-    display: flex;
-    flex-direction:column;
-    align-items: center;
-    justify-content: center;
-`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  li {
+    list-style-type: circle;
+    line-height: 1.5rem;
+  }
+`;
