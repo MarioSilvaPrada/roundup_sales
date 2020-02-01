@@ -32,17 +32,26 @@ export const Content = styled.div`
   ${(props) => props.reverse && 'flex-direction: row-reverse'};
   justify-content: space-between;
   align-items: center;
-  margin-top: 2rem;
+  margin-top: 10rem;
 `;
 
 export const Bullets = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
+  letter-spaccing: 1.2rem;
+  line-height: 1.8rem;
+
+  h1,h5 {
+    margin: 0;
+  }
+  h5 {
+    margin: 1rem 0 .5rem;
+    font-style: italic;
+  }
 
   li {
     list-style-type: circle;
-    line-height: 1.5rem;
   }
 `;
