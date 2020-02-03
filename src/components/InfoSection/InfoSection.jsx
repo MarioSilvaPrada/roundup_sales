@@ -52,25 +52,24 @@ const InfoSection = () => {
   return (
     <S.StyledContainer>
       <S.Wrapper>
-        <S.StyledTitle>Get a free consultation!</S.StyledTitle>
-        <S.StyledDescription>
-          We will organize a quick 15 min discovery call to find out more about your specific
-          context and goals. From then on, we'll build a tailored project and timeline for your
-          company.
-        </S.StyledDescription>
-        {content.map((cont, i) => {
-          console.log(i)
-          return (
+        <S.Poster>
+          <S.StyledTitle>Get a free consultation!</S.StyledTitle>
+          <S.StyledDescription>
+            We will organize a quick 15 min discovery call to find out more about your specific
+            context and goals. From then on, we'll build a tailored project and timeline for your
+            company.
+          </S.StyledDescription>
+        </S.Poster>
+          {content.map((cont, i) => (
             <S.Content reverse={i % 2}>
-              <S.StyledImg src={cont.img} />
+              <S.StyledImg key={i} src={cont.img} />
               <S.Bullets>
                 <h1>{cont.title}</h1>
                 <h5>{cont.subtitle}</h5>
                 <ul>{cont.bullets.map((bullet) => <li>{bullet}</li>)}</ul>
               </S.Bullets>
             </S.Content>
-          );
-        })}
+          ))}
       </S.Wrapper>
     </S.StyledContainer>
   );

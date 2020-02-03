@@ -10,7 +10,7 @@ export const StyledTitle = styled.h1`
   font-size: 1.5rem;
   font-weight: bold;
   text-align: center;
-  margin-bottom: 1.9rem;
+  margin-bottom: 1.5rem;
 `;
 
 export const StyledDescription = styled.p`
@@ -26,6 +26,13 @@ export const Wrapper = styled.div`
   margin-bottom: 2.5rem;
 `;
 
+export const Poster = styled.div`
+  border: 1px solid grey;
+  border-radius: 50px;
+  background: #f9f9f9;
+  padding: 1rem;
+`;
+
 export const StyledImg = styled.img`width: 20rem;`;
 export const Content = styled.div`
   display: flex;
@@ -35,6 +42,7 @@ export const Content = styled.div`
   margin-top: 10rem;
 `;
 
+
 export const Bullets = styled.div`
   display: flex;
   flex-direction: column;
@@ -43,7 +51,8 @@ export const Bullets = styled.div`
   letter-spaccing: 1.2rem;
   line-height: 1.8rem;
 
-  h1,h5 {
+  h1,
+  h5 {
     margin: 0;
   }
   h5 {
