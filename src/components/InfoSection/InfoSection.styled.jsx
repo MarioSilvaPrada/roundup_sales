@@ -4,6 +4,7 @@ import { MAX_WIDTH } from 'config/style';
 export const StyledContainer = styled.div`
   padding: 20px 15px;
   max-width: ${MAX_WIDTH};
+  margin: 0 auto;
 `;
 
 export const StyledTitle = styled.h1`
@@ -21,7 +22,7 @@ export const StyledDescription = styled.p`
 `;
 
 export const Wrapper = styled.div`
-  width: 60%;
+  width: 80%;
   margin: 0 auto;
   margin-bottom: 2.5rem;
 `;
@@ -33,7 +34,7 @@ export const Poster = styled.div`
   padding: 1rem;
 `;
 
-export const StyledImg = styled.img`width: 20rem;`;
+export const StyledImg = styled.img`width: 30rem;`;
 export const Content = styled.div`
   display: flex;
   ${(props) => props.reverse && 'flex-direction: row-reverse'};
