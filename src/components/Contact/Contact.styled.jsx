@@ -61,4 +61,5 @@ export const TextArea = styled.textarea`
   padding: 1rem 2rem;
   margin-bottom: 3rem;
   height: 10rem;
+  resize: none;
 `;
