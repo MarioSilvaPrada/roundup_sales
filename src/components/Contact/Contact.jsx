@@ -10,6 +10,7 @@ const Contact = () => {
           <S.Input placeholder='Name' />
           <S.Input placeholder='E-mail' />
           <S.TextArea placeholder='Tell us more about your problem' />
+          <S.Submit type='submit' value='Send'/>
         </S.Form>
       </S.Wrapper>
     </S.Container>

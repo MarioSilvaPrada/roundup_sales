@@ -8,6 +8,7 @@ import WelcomeSection from 'components/WelcomeSection/WelcomeSection';
 import SectionTitle from 'components/SectionTitle/SectionTitle';
 import InfoSection from 'components/InfoSection/InfoSection';
 import Contact from 'components/Contact/Contact';
+import Footer from 'components/Footer/Footer';
 
 const App = () => {
   const [ data, setData ] = useState({});
@@ -50,11 +51,7 @@ const App = () => {
           <SectionTitle data={sectionTitle} />
           <InfoSection />
           <Contact />
-
-          {/* <div className='section'>
-            <Wave fill={BLUE} style={{ marginBottom: '-5px' }} />
-            <S.StyledFooter color={BLUE}>teste</S.StyledFooter>
-          </div> */}
+          <Footer />
         </div>
       )}
     </S.StyledApp>
