@@ -3,13 +3,11 @@ import { client } from './ContentfulClient';
 
 import * as S from './App.styled';
 
-import Wave from 'assets/svg/Wave';
 import Header from 'components/Header/Header';
 import WelcomeSection from 'components/WelcomeSection/WelcomeSection';
 import SectionTitle from 'components/SectionTitle/SectionTitle';
 import InfoSection from 'components/InfoSection/InfoSection';
-
-import { BLUE } from 'config/style';
+import Contact from 'components/Contact/Contact';
 
 const App = () => {
   const [ data, setData ] = useState({});
@@ -51,6 +49,7 @@ const App = () => {
           <WelcomeSection data={welcomeData} />
           <SectionTitle data={sectionTitle} />
           <InfoSection />
+          <Contact />
 
           {/* <div className='section'>
             <Wave fill={BLUE} style={{ marginBottom: '-5px' }} />

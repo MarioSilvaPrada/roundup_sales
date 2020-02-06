@@ -18,7 +18,7 @@ export const StyledContent = styled.div`
   max-width: 440px;
 `;
 
-export const StyledImage = styled.img`width: 30rem;`;
+export const StyledImage = styled.img`width: 50rem;`;
 
 export const StyledTitle = styled.h1`
   font-size: 2rem;

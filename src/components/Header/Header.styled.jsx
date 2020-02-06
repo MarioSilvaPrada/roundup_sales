@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { MAX_WIDTH } from '../../config/style';
+import { MAX_WIDTH, BLUE } from '../../config/style';
 
 export const StyledHeader = styled.div`
   width: 100%;
@@ -17,11 +17,19 @@ export const StyledLink = styled.span`
   margin-right: 2rem;
   font-size: .9rem;
   cursor: pointer;
+  align-self: center;
+  padding: 1rem .5rem ;
+  border-bottom: 2px solid transparent;
+  transition: .7s;
+
+  &:hover {
+    border-bottom: 2px solid ${BLUE};
+  }
 `;
 
 export const StyledLeftHeader = styled.div`
   display: flex;
-  align-items: center;
+  align-items: stretch;
 `;
 
 export const StyledHeaderContainer = styled.div`

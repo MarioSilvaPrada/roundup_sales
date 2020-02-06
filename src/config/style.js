@@ -1,3 +1,3 @@
-export const BLUE = '#44d7b6';
+export const BLUE = '#4e54c8';
 
 export const MAX_WIDTH = '1400px';
