@@ -5,7 +5,7 @@ export const Container = styled.div`
   max-width: ${MAX_WIDTH};
   border-top: 2px solid rgba(0, 0, 0, 0.1);
   margin: 3rem auto 2rem;
-  padding: 2rem 0;
+  padding: 20px 15px;;
 `;
 
 export const Wrapper = styled.div`

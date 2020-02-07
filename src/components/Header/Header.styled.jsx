@@ -11,7 +11,7 @@ export const StyledNavBar = styled.div`
   margin-left: 4rem;
 `;
 
-export const StyledLogo = styled.img`width: 50px;`;
+export const StyledLogo = styled.img`width: 3.2rem;`;
 
 export const StyledLink = styled.span`
   margin-right: 2rem;

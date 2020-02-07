@@ -24,6 +24,10 @@ export const Content = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-top: 10rem;
+
+  @media (max-width: 940px) {
+    flex-direction: column-reverse;
+  }
 `;
 
 

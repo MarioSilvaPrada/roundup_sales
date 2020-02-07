@@ -18,3 +18,16 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
+
+
+@media screen and (max-width: 1400px) {
+  html {
+    font-size: 80%;
+  }
+}
+
+@media screen and (max-width: 1040px) {
+  html {
+    font-size: 70%;
+  }
+}

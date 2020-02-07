@@ -1,7 +1,12 @@
 import styled from 'styled-components';
 import { MAX_WIDTH } from '../../config/style';
 
-export const StyledContainer = styled.div`padding: 2rem 5rem;`;
+export const StyledContainer = styled.div`
+  padding: 2rem 5rem;
+  @media (max-width: 940px) {
+    padding: 15px;
+  }
+`;
 
 export const StyledWelcomeContainer = styled.div`
   display: flex;
@@ -9,6 +14,11 @@ export const StyledWelcomeContainer = styled.div`
   align-items: center;
   max-width: ${MAX_WIDTH};
   margin: 0 auto;
+  position: relative;
+
+  @media (max-width: 940px) {
+    flex-direction: column;
+  }
 `;
 
 export const StyledContent = styled.div`
@@ -16,9 +26,20 @@ export const StyledContent = styled.div`
   flex-direction: column;  
   align-items: flex-start;
   max-width: 440px;
+  @media (max-width: 940px) {
+    margin-bottom: 30px;
+    align-items: center;
+  }
 `;
 
-export const StyledImage = styled.img`width: 50rem;`;
+export const StyledImage = styled.img`
+  width: 50rem;
+
+  @media (max-width: 940px) {
+    width: 100%;
+  }
+
+`;
 
 export const StyledTitle = styled.h1`
   font-size: 2rem;
@@ -31,10 +52,13 @@ export const StyledText = styled.span`
   letter-spacing: .3px;
   line-height: 1.9rem;
   margin-bottom: 2rem;
+
+  @media (max-width: 940px) {
+    text-align: center;
+  }
 `;
 
 export const StyledButtons = styled.div`
-  width: 100%;
 
   button:first-child {
     margin-right: 3rem;
