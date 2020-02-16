@@ -1,12 +1,15 @@
 import React from 'react';
 import * as S from './InfoSection.styled';
 
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+
 import website from 'assets/website.svg';
 import mapping from 'assets/mapping.svg';
 import trainning from 'assets/trainning.svg';
 import improve from 'assets/improve.svg';
 
-const InfoSection = () => {
+const InfoSection = ({ data }) => {
+  console.log(documentToReactComponents(data.point));
   let content = [
     {
       img: website,
@@ -62,6 +65,7 @@ const InfoSection = () => {
             </S.Bullets>
           </S.Content>
         ))}
+        {documentToReactComponents(data.point)}
       </S.Wrapper>
     </S.StyledContainer>
   );

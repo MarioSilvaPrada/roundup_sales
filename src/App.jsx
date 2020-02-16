@@ -15,6 +15,7 @@ const App = () => {
   const [ headerData, setHeaderData ] = useState({});
   const [ welcomeData, setWelcomeData ] = useState({});
   const [ sectionTitle, setSectionTitle ] = useState({});
+  const [ topics, setTopics ] = useState({});
   const [ isLoading, setIsLoading ] = useState(true);
 
   useEffect(() => {
@@ -27,6 +28,8 @@ const App = () => {
           setWelcomeData(entry.fields);
         } else if (entry.fields.title === 'sectionTitle1') {
           setSectionTitle(entry.fields);
+        } else if (entry.fields.title === 'Topics') {
+          setTopics(entry.fields);
         } else {
           setData(entry);
         }
@@ -49,7 +52,7 @@ const App = () => {
           <Header data={headerData} />
           <WelcomeSection data={welcomeData} />
           <SectionTitle data={sectionTitle} />
-          <InfoSection />
+          <InfoSection data={topics}/>
           <Contact />
           <Footer />
         </div>
