@@ -52,7 +52,7 @@ const App = () => {
           <Header data={headerData} />
           <WelcomeSection data={welcomeData} />
           <SectionTitle data={sectionTitle} />
-          <InfoSection data={topics}/>
+          <InfoSection data={topics} />
           <Contact />
           <Footer />
         </div>
