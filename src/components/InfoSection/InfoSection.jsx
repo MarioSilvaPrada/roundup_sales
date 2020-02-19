@@ -13,43 +13,19 @@ const InfoSection = ({ data }) => {
   let content = [
     {
       img: website,
-      title: 'Website Optimization',
-      subtitle: 'Drive Business Goals Online',
-      bullets: [
-        'Reducing Bounce Rate',
-        'Analyzing sources of traffic',
-        'Improving your website funnel',
-        'Optimizing your website code and content',
-        'Monetization Strategies',
-      ],
+      richText: documentToReactComponents(data.point),
     },
     {
       img: mapping,
-      title: 'Process Mapping',
-      subtitle: 'Run an efficient and lean company',
-      bullets: [ 'Compliance', 'Process/workflow clarification', 'Internal Audit', 'Role clarity' ],
+      richText: documentToReactComponents(data.point2),
     },
     {
       img: improve,
-      title: 'Syndicated Lead Generation',
-      subtitle: 'Increase Sales Opportunities',
-      bullets: [
-        'Identifying strong market potential',
-        'Managing and Converting Inbound Leads',
-        'Assessing and analyzing prospects',
-        'Value propositioning',
-      ],
+      richText: documentToReactComponents(data.point3),
     },
     {
       img: trainning,
-      title: 'Sales Training',
-      subtitle: 'Superpower your sales team',
-      bullets: [
-        'Standardizing Reporting',
-        'CRM Best Practices and Hygiene',
-        'Sales Content Creation',
-        'Prospecting and Email Automation',
-      ],
+      richText: documentToReactComponents(data.point4),
     },
   ];
   return (
@@ -58,14 +34,9 @@ const InfoSection = ({ data }) => {
         {content.map((cont, i) => (
           <S.Content reverse={i % 2}>
             <S.StyledImg key={i} src={cont.img} />
-            <S.Bullets>
-              <h1>{cont.title}</h1>
-              <h5>{cont.subtitle}</h5>
-              <ul>{cont.bullets.map((bullet) => <li>{bullet}</li>)}</ul>
-            </S.Bullets>
+            <S.RichText>{cont.richText}</S.RichText>
           </S.Content>
         ))}
-        {documentToReactComponents(data.point)}
       </S.Wrapper>
     </S.StyledContainer>
   );
