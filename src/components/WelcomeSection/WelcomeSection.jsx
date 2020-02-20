@@ -12,7 +12,9 @@ const WelcomeSection = ({ data, id }) => {
           <S.StyledTitle>{data.sectionTitle}</S.StyledTitle>
           <S.StyledText>{data.sectionDescription}</S.StyledText>
           <S.StyledButtons>
-            <Button><a href='#contact'>{data.buttonText[0]}</a></Button>
+            <a href='#contact'>
+              <Button>{data.buttonText[0]}</Button>
+            </a>
             {/* <Button background={'white'} color={BLUE}>{data.buttonText[1]}</Button> */}
           </S.StyledButtons>
         </S.StyledContent>
