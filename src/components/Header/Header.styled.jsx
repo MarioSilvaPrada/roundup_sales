@@ -13,7 +13,7 @@ export const StyledNavBar = styled.div`
 
 export const StyledLogo = styled.img`width: 3.2rem;`;
 
-export const StyledLink = styled.span`
+export const StyledLink = styled.a`
   margin-right: 2rem;
   font-size: .9rem;
   cursor: pointer;

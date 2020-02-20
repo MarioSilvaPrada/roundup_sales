@@ -42,7 +42,7 @@ export const StyledImage = styled.img`
 `;
 
 export const StyledTitle = styled.h1`
-  font-size: 2rem;
+  font-size: 4rem;
   letter-spacing: .4px;
   margin-bottom: 2rem;
 `;

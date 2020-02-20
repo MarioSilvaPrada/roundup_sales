@@ -3,7 +3,8 @@ import * as S from './Contact.styled';
 
 const Contact = () => {
   return (
-    <S.Container>
+    <S.Container id='contact'>
+      <S.StyledTitle>Contact us</S.StyledTitle>
       <S.Wrapper>
         <S.Title>Let's work together</S.Title>
         <S.Form>

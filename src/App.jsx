@@ -20,7 +20,6 @@ const App = () => {
 
   useEffect(() => {
     client.getEntries().then((entries) => {
-      console.log(entries.items);
       entries.items.map(function(entry) {
         if (entry.fields.title === 'Header') {
           setHeaderData(entry.fields);
@@ -50,11 +49,11 @@ const App = () => {
       ) : (
         <div>
           <Header data={headerData} />
-          <WelcomeSection data={welcomeData} />
+          <WelcomeSection data={welcomeData} id={headerData.link[0]} />
           <SectionTitle data={sectionTitle} />
-          <InfoSection data={topics} />
+          <InfoSection data={topics} id={headerData.link[1]} />
           <Contact />
-          <Footer />
+          <Footer id={headerData.link} />
         </div>
       )}
     </S.StyledApp>

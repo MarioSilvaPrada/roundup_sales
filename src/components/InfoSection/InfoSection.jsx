@@ -1,15 +1,16 @@
 import React from 'react';
 import * as S from './InfoSection.styled';
-
+import {Animated} from "react-animated-css";
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
 import website from 'assets/website.svg';
 import mapping from 'assets/mapping.svg';
 import trainning from 'assets/trainning.svg';
 import improve from 'assets/improve.svg';
+import marketing from 'assets/marketing.svg';
+import software from 'assets/software.svg';
 
-const InfoSection = ({ data }) => {
-  console.log(documentToReactComponents(data.point));
+const InfoSection = ({ data, id }) => {
   let content = [
     {
       img: website,
@@ -27,15 +28,26 @@ const InfoSection = ({ data }) => {
       img: trainning,
       richText: documentToReactComponents(data.point4),
     },
+    {
+      img: software,
+      richText: documentToReactComponents(data.point5),
+    },
+    {
+      img: marketing,
+      richText: documentToReactComponents(data.point6),
+    },
   ];
   return (
-    <S.StyledContainer>
+    <S.StyledContainer id={id}>
+      <S.StyledTitle>Our services</S.StyledTitle>
       <S.Wrapper>
         {content.map((cont, i) => (
-          <S.Content reverse={i % 2}>
-            <S.StyledImg key={i} src={cont.img} />
-            <S.RichText>{cont.richText}</S.RichText>
-          </S.Content>
+          <Animated animationIn="fadeInLeft" isVisible={true}>
+            <S.Content reverse={i % 2}>
+              <S.StyledImg key={i} src={cont.img} />
+              <S.RichText>{cont.richText}</S.RichText>
+            </S.Content>
+          </Animated>
         ))}
       </S.Wrapper>
     </S.StyledContainer>
