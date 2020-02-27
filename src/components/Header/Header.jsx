@@ -9,7 +9,7 @@ const Header = ({ data }) => {
         <S.StyledLeftHeader>
           <S.StyledLogo src={data.logo.fields.file.url} />
           <S.StyledNavBar>
-            {data.link.map((link) => <S.StyledLink key={link} href={`#${link}`}>{link}</S.StyledLink>)}
+            {data.link.map((link) => <S.StyledLink key={link} href={link !== 'E-books' ? `#${link}` : `/ebooks`}>{link}</S.StyledLink>)}
           </S.StyledNavBar>
         </S.StyledLeftHeader>
       </S.StyledHeaderContainer>
