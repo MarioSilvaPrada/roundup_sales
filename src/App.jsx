@@ -35,11 +35,6 @@ const App = () => {
       });
       setIsLoading(false);
     });
-
-    // client.getEntry('7nAVhgvNaAAtay77brCEC9').then(function(entry) {
-    //   setData(entry.fields);
-    //   setIsLoading(false);
-    // });
   }, []);
 
   return (
@@ -48,7 +43,6 @@ const App = () => {
         <h1>Loading</h1>
       ) : (
         <div>
-          <Header data={headerData} />
           <WelcomeSection data={welcomeData} id={headerData.link[0]} />
           <SectionTitle data={sectionTitle} />
           <InfoSection data={topics} id={headerData.link[1]} />

@@ -1,15 +1,19 @@
 import React from 'react';
 import * as S from './Header.styled';
 
+import logo from 'assets/logo.svg';
 
-const Header = ({ data }) => {
+const Header = () => {
   return (
     <S.StyledHeader>
       <S.StyledHeaderContainer>
         <S.StyledLeftHeader>
-          <S.StyledLogo src={data.logo.fields.file.url} />
+          <S.StyledLogo src={logo} />
           <S.StyledNavBar>
-            {data.link.map((link) => <S.StyledLink key={link} href={link !== 'E-books' ? `#${link}` : `/ebooks`}>{link}</S.StyledLink>)}
+            <S.StyledLink href={'#Home'}>Home</S.StyledLink>
+            <S.StyledLink href={'#Services'}>Services</S.StyledLink>
+            <S.StyledLink href={'#About us'}>About us</S.StyledLink>
+            <S.StyledLink href={'/resources'}>Resources</S.StyledLink>
           </S.StyledNavBar>
         </S.StyledLeftHeader>
       </S.StyledHeaderContainer>
