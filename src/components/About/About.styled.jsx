@@ -22,6 +22,10 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @media (max-width: 940px) {
+    padding: 1rem 2rem;
+  }
 `;
 
 export const Wave = styled.div`
@@ -33,4 +37,8 @@ export const Wave = styled.div`
   height: 100%;
   width: 100%;
   border-radius: 15%;
+
+  @media (max-width: 940px) {
+    border-radius: 2rem;
+  }
 `;

@@ -7,12 +7,12 @@ const Contact = () => {
       <S.StyledTitle>Start Growing</S.StyledTitle>
       <S.Wrapper>
         <S.Title>Let's work together</S.Title>
-        <S.Form>
+        <S.Form action='https://forms.gle/wNtKLnkoQKqrp36K6'>
           <S.Input placeholder='Company' />
           <S.Input placeholder='Name' />
           <S.Input placeholder='E-mail' />
           <S.TextArea placeholder='Tell us more about your project.' />
-          <S.Submit type='submit' value='Start now'/>
+          <S.Submit type='submit' value='Start now' />
         </S.Form>
       </S.Wrapper>
     </S.Container>

@@ -28,6 +28,10 @@ export const Links = styled.div`
   a:hover {
     border-bottom: 2px solid white;
   }
+
+  @media (max-width: 500px) {
+    flex-direction: column;
+  }
 `;
 
 export const Wrapper = styled.div`

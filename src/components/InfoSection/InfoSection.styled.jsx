@@ -8,7 +8,7 @@ export const StyledContainer = styled.div`
 `;
 
 export const Wrapper = styled.div`
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   margin-bottom: 2.5rem;
 
@@ -31,12 +31,9 @@ export const Content = styled.div`
   box-shadow: ${BOX_SHADOW};
   padding: 4rem 5rem;
   border-radius: 2rem;
-  // transform: translate(${(props) => (props.reverse ? '20%' : '-20%')});
   min-height: 35rem;
 
-  // @media (max-width: 1600px) {
-  //   transform: translate(0);
-  // }
+  
   @media (max-width: 940px) {
     flex-direction: column-reverse;
   }
