@@ -10,10 +10,10 @@ const Header = () => {
         <S.StyledLeftHeader>
           <S.StyledLogo src={logo} />
           <S.StyledNavBar>
-            <S.StyledLink href={'#Home'}>Home</S.StyledLink>
+            <S.StyledLink href={'#Process'}>Process</S.StyledLink>
             <S.StyledLink href={'#Services'}>Services</S.StyledLink>
-            <S.StyledLink href={'#About us'}>About us</S.StyledLink>
-            <S.StyledLink href={'/resources'}>Resources</S.StyledLink>
+            <S.StyledLink href={'#Resources'}>Resources</S.StyledLink>
+            <S.StyledLink href={'#about'}>About us</S.StyledLink>
           </S.StyledNavBar>
         </S.StyledLeftHeader>
       </S.StyledHeaderContainer>

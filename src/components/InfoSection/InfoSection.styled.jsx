@@ -31,12 +31,12 @@ export const Content = styled.div`
   box-shadow: ${BOX_SHADOW};
   padding: 4rem 5rem;
   border-radius: 2rem;
-  transform: translate(${(props) => (props.reverse ? '20%' : '-20%')});
+  // transform: translate(${(props) => (props.reverse ? '20%' : '-20%')});
   min-height: 35rem;
 
-  @media (max-width: 1600px) {
-    transform: translate(0);
-  }
+  // @media (max-width: 1600px) {
+  //   transform: translate(0);
+  // }
   @media (max-width: 940px) {
     flex-direction: column-reverse;
   }

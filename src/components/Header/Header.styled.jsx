@@ -3,12 +3,20 @@ import { MAX_WIDTH, BLUE } from '../../config/style';
 
 export const StyledHeader = styled.div`
   width: 100%;
-  padding: 20px 15px;
+  padding: 2rem 5rem;
+
+  @media (max-width: 940px) {
+    padding: 15px;
+  }
 `;
 
 export const StyledNavBar = styled.div`
   display: flex;
   margin-left: 4rem;
+  @media (max-width: 940px) {
+    margin-left: 1rem;
+    text-align: center;
+  }
 `;
 
 export const StyledLogo = styled.img`width: 3.2rem;`;
@@ -18,7 +26,7 @@ export const StyledLink = styled.a`
   font-size: .9rem;
   cursor: pointer;
   align-self: center;
-  padding: 1rem .5rem ;
+  padding: 1rem .5rem;
   border-bottom: 2px solid transparent;
   transition: .7s;
 

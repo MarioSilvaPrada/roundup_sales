@@ -42,8 +42,8 @@ const InfoSection = ({ data, id }) => {
       <S.StyledTitle id='test'>Our services</S.StyledTitle>
       <S.Wrapper>
         {content.map((cont, i) => (
-          <S.Content reverse={i % 2}>
-            <S.StyledImg key={i} src={cont.img} />
+          <S.Content key={i} reverse={i % 2}>
+            <S.StyledImg  src={cont.img} />
             <S.RichText>{cont.richText}</S.RichText>
           </S.Content>
         ))}

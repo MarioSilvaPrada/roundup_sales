@@ -7,8 +7,11 @@ import Header from 'components/Header/Header';
 import WelcomeSection from 'components/WelcomeSection/WelcomeSection';
 import SectionTitle from 'components/SectionTitle/SectionTitle';
 import InfoSection from 'components/InfoSection/InfoSection';
+import Process from 'components/Process/Process';
 import Contact from 'components/Contact/Contact';
 import Footer from 'components/Footer/Footer';
+import Ebooks from 'components/Ebooks/Ebooks';
+import About from 'components/About/About';
 
 const App = () => {
   const [ data, setData ] = useState({});
@@ -45,7 +48,10 @@ const App = () => {
         <div>
           <WelcomeSection data={welcomeData} id={headerData.link[0]} />
           <SectionTitle data={sectionTitle} />
+          <Process />
           <InfoSection data={topics} id={headerData.link[1]} />
+          <Ebooks />
+          <About />
           <Contact />
           <Footer id={headerData.link} />
         </div>

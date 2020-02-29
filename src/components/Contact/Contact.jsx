@@ -8,6 +8,7 @@ const Contact = () => {
       <S.Wrapper>
         <S.Title>Let's work together</S.Title>
         <S.Form>
+          <S.Input placeholder='Company' />
           <S.Input placeholder='Name' />
           <S.Input placeholder='E-mail' />
           <S.TextArea placeholder='Tell us more about your project.' />
