@@ -14,7 +14,7 @@ export const StyledNavBar = styled.div`
   display: flex;
   margin-left: 4rem;
   @media (max-width: 940px) {
-    margin-left: 1rem;
+    margin-left: 0rem;
     text-align: center;
   }
 `;
