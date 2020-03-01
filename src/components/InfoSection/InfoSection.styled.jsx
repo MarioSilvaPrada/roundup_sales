@@ -57,6 +57,7 @@ export const RichText = styled.div`
   h4,
   h5 {
     line-height: 2rem;
+    margin: 0;
   }
 
   li {

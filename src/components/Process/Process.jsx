@@ -39,11 +39,11 @@ const Process = () => {
     <S.Container id='Process'>
       <S.Title>Process</S.Title>
       <S.Wrapper>
-        {processArr.map(({ img, content, name }) => (
+        {processArr.map(({ img, content, name }, i) => (
           <S.Card key={content}>
             {img}
             <S.Name>{name}</S.Name>
-            <S.Content>{content}</S.Content>
+            <S.Number>{i + 1}</S.Number>
           </S.Card>
         ))}
       </S.Wrapper>

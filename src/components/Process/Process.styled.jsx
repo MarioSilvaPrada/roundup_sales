@@ -41,6 +41,7 @@ export const Content = styled.p`
 export const Name = styled.p`
   font-size: 1.1rem;
   font-weight: bold;
+  min-height: 2rem;
 `;
 
 export const Title = styled.h1`
@@ -49,3 +50,8 @@ export const Title = styled.h1`
   font-size: 2.8rem;
   color: ${BLUE};
 `;
+
+export const Number = styled.h1`
+  font-size: 5rem;
+  margin-top: 0;
+`
