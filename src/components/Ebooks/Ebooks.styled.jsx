@@ -3,18 +3,18 @@ import { MAX_WIDTH, BLUE } from 'config/style';
 
 export const Container = styled.div`
   max-width: ${MAX_WIDTH};
-  margin: 0 auto;
+  margin: 0 auto 5rem;
 `;
 
 export const Title = styled.h1`
   text-align: center;
-  margin: 5rem 0 1rem;
+  margin: 5rem 0 3rem;
   font-size: 2.8rem;
   color: ${BLUE};
 `;
 
 export const Cover = styled.img`
-  width: 20rem;
+  height: 25rem;
   border-radius: 1rem;
   margin-bottom: 3rem;
   box-shadow: 10px 9px 20px 6px rgba(33,43,54,0.2);
@@ -29,16 +29,15 @@ export const BookTitle = styled.p`
 `;
 
 export const Wrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+  grid-row-gap: 4rem;
   margin: 0 auto;
-  padding: 2rem 4rem;
+  padding: 0 5rem;
 `;
 
 export const Card = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 3rem 2rem;
 `;

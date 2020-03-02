@@ -25,7 +25,6 @@ const About = () => {
         </p>
         <p>Sincerely,</p>
         <i>RoundUp Sales</i>
-        <S.Wave />
       </S.Content>
     </S.Container>
   );

@@ -1,31 +1,41 @@
 import React from 'react';
 import * as S from './Ebooks.styled';
 import { BLUE } from 'config/style';
-import book1 from 'assets/ebooks/5_things_we_love_on_Hubspot.docx';
-import book2 from 'assets/ebooks/7_Steps_for_designing_a_Website_that_Sells.docx';
-import book3 from 'assets/ebooks/Inbound_Marketing_Checklist.docx';
+// ebooks
+import book1 from 'assets/ebooks/5 things we love on Hubspot CRM.pdf';
+import book2 from 'assets/ebooks/7 steps for designing a website that sells.pdf';
+import book3 from 'assets/ebooks/Inbound Marketing Checklist.pdf';
+import book4 from 'assets/ebooks/Deal Evaluation Checklist.pdf';
+
+// covers
+import cover1 from 'assets/ebooks/5_things_cover.png';
+import cover2 from 'assets/ebooks/7_steps_cover.png';
+import cover3 from 'assets/ebooks/Inbound_cover.png';
+import cover4 from 'assets/ebooks/Deal_cover.png';
 
 import Button from 'components/Button/Button';
 
 const Ebooks = () => {
   const ebookArr = [
     {
-      cover:
-        'https://images.pexels.com/photos/3624312/pexels-photo-3624312.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+      cover: cover1,
       download: book1,
       title: '5 things we love on Hubspot',
     },
     {
-      cover:
-        'https://images.pexels.com/photos/3624312/pexels-photo-3624312.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+      cover: cover2,
       download: book2,
       title: '7 steps for designing a website that sells',
     },
     {
-      cover:
-        'https://images.pexels.com/photos/3624312/pexels-photo-3624312.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+      cover: cover3,
       download: book3,
       title: 'Inbound marketing checklist',
+    },
+    {
+      cover: cover4,
+      download: book4,
+      title: 'Deal Evaluation Checklist',
     },
   ];
   return (
@@ -34,7 +44,6 @@ const Ebooks = () => {
       <S.Wrapper>
         {ebookArr.map((ebook, i) => (
           <S.Card key={i}>
-            <S.BookTitle>{ebook.title}</S.BookTitle>
             <S.Cover src={ebook.cover} />
             <a href={ebook.download}>
               <Button scale background='white' color={BLUE}>
