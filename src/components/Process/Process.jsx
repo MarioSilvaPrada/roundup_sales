@@ -41,7 +41,7 @@ const Process = () => {
       <S.Wrapper>
         {processArr.map(({ img, content, name }, i) => (
           <S.Card key={content}>
-            <S.Icon alt='icon' src={img} />
+            <S.IconWrapper><S.Icon alt='icon' src={img} /></S.IconWrapper>
             <S.Name>
               {i + 1}. {name}
             </S.Name>

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { MAX_WIDTH, BLUE } from 'config/style';
+import { MAX_WIDTH, BLUE, Gradient } from 'config/style';
 
 export const Container = styled.div`
   max-width: ${MAX_WIDTH};
@@ -54,5 +54,15 @@ export const Title = styled.h1`
 
 
 export const Icon = styled.img`
+  width: 5rem;
+`
+
+export const IconWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: ${Gradient};
+  border-radius: 100%;
   width: 10rem;
+  height: 10rem;
 `
