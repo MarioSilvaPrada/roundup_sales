@@ -11,6 +11,9 @@ export const Wrapper = styled.div`
   width: 90%;
   margin: 0 auto;
   margin-bottom: 2.5rem;
+  box-shadow: ${BOX_SHADOW};
+  min-height: 35rem;
+  border-radius: 2rem;
 
   & > *:not(:first-child) {
     margin-top: 10rem;
@@ -28,12 +31,8 @@ export const Content = styled.div`
   ${(props) => props.reverse && 'flex-direction: row-reverse'};
   justify-content: space-between;
   align-items: center;
-  box-shadow: ${BOX_SHADOW};
   padding: 4rem 5rem;
-  border-radius: 2rem;
-  min-height: 35rem;
 
-  
   @media (max-width: 940px) {
     flex-direction: column-reverse;
   }
