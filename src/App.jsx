@@ -6,7 +6,7 @@ import * as S from './App.styled';
 import Header from 'components/Header/Header';
 import WelcomeSection from 'components/WelcomeSection/WelcomeSection';
 import SectionTitle from 'components/SectionTitle/SectionTitle';
-import InfoSection from 'components/InfoSection/InfoSection';
+import Services from 'components/Services/Services';
 import Process from 'components/Process/Process';
 import Contact from 'components/Contact/Contact';
 import Footer from 'components/Footer/Footer';
@@ -49,7 +49,7 @@ const App = () => {
           <WelcomeSection data={welcomeData} id={headerData.link[0]} />
           <SectionTitle data={sectionTitle} />
           <Process />
-          <InfoSection data={topics} id={headerData.link[1]} />
+          <Services data={topics} id={headerData.link[1]} />
           <Ebooks />
           <About />
           <Contact />

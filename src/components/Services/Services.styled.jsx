@@ -14,10 +14,10 @@ export const Wrapper = styled.div`
   box-shadow: ${BOX_SHADOW};
   min-height: 35rem;
   border-radius: 2rem;
-
-  & > *:not(:first-child) {
-    margin-top: 10rem;
-  }
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const StyledImg = styled.img`
@@ -26,12 +26,15 @@ export const StyledImg = styled.img`
     width: 20rem;
   }
 `;
+
 export const Content = styled.div`
-  display: flex;
   ${(props) => props.reverse && 'flex-direction: row-reverse'};
   justify-content: space-between;
   align-items: center;
-  padding: 4rem 5rem;
+  padding: 2rem;
+  height: 100%;
+
+  display: ${(props) => (props.isVisible ? 'flex' : 'none')};
 
   @media (max-width: 940px) {
     flex-direction: column-reverse;
@@ -69,4 +72,14 @@ export const StyledTitle = styled.h1`
   margin: 5rem 0;
   font-size: 2.8rem;
   color: ${BLUE};
+`;
+
+export const Arrow = styled.img`
+  position: absolute;
+  top: 50%;
+  right: ${(props) => (props.left ? 'auto' : '1rem')};
+  left: ${(props) => (props.left ? '1rem' : 'auto')};
+  ${(props) => props.left && 'transform: rotate(180deg)'};
+  width: 3rem;
+  cursor: pointer;
 `;

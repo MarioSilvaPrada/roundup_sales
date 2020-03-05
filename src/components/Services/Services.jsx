@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import * as S from './InfoSection.styled';
+import * as S from './Services.styled';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-import { Carousel } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 import website from 'assets/website.svg';
 import mapping from 'assets/mapping.svg';
@@ -10,6 +8,8 @@ import trainning from 'assets/trainning.svg';
 import improve from 'assets/improve.svg';
 import marketing from 'assets/marketing.svg';
 import software from 'assets/software.svg';
+
+import arrow from 'assets/arrow.svg';
 
 const InfoSection = ({ data, id }) => {
   let content = [
@@ -39,24 +39,20 @@ const InfoSection = ({ data, id }) => {
     },
   ];
 
-  const [ index, setIndex ] = useState(1);
-  const handleSelect = (selectedIndex, e) => {
-    setIndex(selectedIndex);
-  };
+  const [indexSlide, setIndexSlide] = useState(0);
+
   return (
     <S.StyledContainer id={id}>
       <S.StyledTitle id='test'>Our services</S.StyledTitle>
       <S.Wrapper>
-        <Carousel activeIndex={index} onSelect={handleSelect}>
-          {content.map((cont, i) => (
-            <Carousel.Item>
-              <S.Content key={i} reverse={i % 2}>
-                <S.StyledImg src={cont.img} />
-                <S.RichText>{cont.richText}</S.RichText>
-              </S.Content>
-            </Carousel.Item>
-          ))}
-        </Carousel>
+        {content.map((cont, i) => (
+          <S.Content key={i} reverse={i % 2} isVisible={indexSlide === i}>
+            <S.StyledImg src={cont.img} />
+            <S.RichText>{cont.richText}</S.RichText>
+          </S.Content>
+        ))}
+        <S.Arrow left alt='arrow' src={arrow} onClick={() => setIndexSlide(indexSlide - 1)}/>
+        <S.Arrow alt='arrow' src={arrow} onClick={() => setIndexSlide(indexSlide + 1)}/>
       </S.Wrapper>
     </S.StyledContainer>
   );

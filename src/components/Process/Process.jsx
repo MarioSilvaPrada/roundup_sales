@@ -7,6 +7,7 @@ import agenda from 'assets/agenda.svg';
 import strategy from 'assets/strategy.svg';
 import support from 'assets/support.svg';
 import target from 'assets/target.svg';
+import handshake from 'assets/handshake.svg';
 
 const Process = () => {
   let processArr = [
@@ -33,6 +34,10 @@ const Process = () => {
       content:
         'Once we have finished mapping out what needs to be done we will offer you professional help in understanding the methodologies and steps you might need to leverage your business. We will help you procure the technology you might need to complete the aforementioned objectives and, if you wish, manage that technology for your to help you revamp your experience.',
       img: target,
+    },
+    {
+      name: 'Continuous Support and Improvement',
+      img: handshake,
     },
   ];
   return (
