@@ -18,6 +18,7 @@ export const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 `;
 
 export const StyledImg = styled.img`
@@ -33,15 +34,15 @@ export const Content = styled.div`
   align-items: center;
   padding: 2rem;
   height: 100%;
-
   display: ${(props) => (props.isVisible ? 'flex' : 'none')};
 
   @media (max-width: 940px) {
     flex-direction: column-reverse;
+    padding: 4rem 2rem;
   }
 
   @media (max-width: 740px) {
-    padding: 2rem;
+    padding: 5rem 2rem;
   }
 `;
 
@@ -77,18 +78,25 @@ export const StyledTitle = styled.h1`
 export const Arrow = styled.img`
   position: absolute;
   top: 50%;
-  right: ${(props) => (props.left ? 'auto' : '1rem')};
-  left: ${(props) => (props.left ? '1rem' : 'auto')};
+  right: ${(props) => (props.left ? 'auto' : '2rem')};
+  left: ${(props) => (props.left ? '2rem' : 'auto')};
   ${(props) => props.left && 'transform: rotate(180deg)'};
-  width: 3rem;
+  width: 2rem;
   cursor: pointer;
+  transition: .5s;
+
+  &:hover {
+    transform: ${(props) => (props.left ? 'translate(-.5rem) rotate(180deg)' : 'translate(.5rem)')};
+  }
 `;
 
 export const CircleWrapper = styled.div`
   display: flex;
+  justify-content: center;
   position: absolute;
   bottom: 1rem;
-  left: 50%;
+  left: 0;
+  right: 0;
 
   & > *:not(:last-child) {
     margin-right: 1rem;
@@ -99,6 +107,6 @@ export const Circle = styled.div`
   width: 1rem;
   height: 1rem;
   border-radius: 100%;
-  background: ${props => props.isSelected ? LIGHT_BLUE : 'none'};
+  background: ${(props) => (props.isSelected ? LIGHT_BLUE : 'none')};
   border: 2px solid ${LIGHT_BLUE};
 `;

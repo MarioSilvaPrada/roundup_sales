@@ -43,6 +43,10 @@ export const Name = styled.p`
   font-weight: bold;
   min-height: 2rem;
   margin-top: 2rem;
+
+  @media (max-width: 640px) {
+    text-align: center;
+  }
 `;
 
 export const Title = styled.h1`
@@ -52,10 +56,7 @@ export const Title = styled.h1`
   color: ${BLUE};
 `;
 
-
-export const Icon = styled.img`
-  width: 5rem;
-`
+export const Icon = styled.img`width: 5rem;`;
 
 export const IconWrapper = styled.div`
   display: flex;
@@ -65,4 +66,4 @@ export const IconWrapper = styled.div`
   border-radius: 100%;
   width: 10rem;
   height: 10rem;
-`
+`;

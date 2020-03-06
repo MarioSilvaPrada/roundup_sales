@@ -34,6 +34,10 @@ export const Wrapper = styled.div`
   grid-row-gap: 4rem;
   margin: 0 auto;
   padding: 0 5rem;
+
+  @media (max-width: 540px) {
+    grid-template-columns: none;
+  }
 `;
 
 export const Card = styled.div`

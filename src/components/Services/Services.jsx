@@ -41,6 +41,29 @@ const InfoSection = ({ data, id }) => {
 
   const [ indexSlide, setIndexSlide ] = useState(0);
 
+  const getCircle = () => {
+    let circlerArr = [];
+    for (let i = 0; i < content.length; i++) {
+      circlerArr.push(<S.Circle isSelected={i === indexSlide} />);
+    }
+    return circlerArr;
+  };
+
+  useEffect(
+    () => {
+      const interval = setInterval(() => {
+        if (indexSlide < content.length - 1) {
+          setIndexSlide(indexSlide + 1);
+        } else {
+          setIndexSlide(0);
+        }
+      }, 4000);
+
+      return () => clearInterval(interval);
+    },
+    [ indexSlide ],
+  );
+
   return (
     <S.StyledContainer id={id}>
       <S.StyledTitle id='test'>Our services</S.StyledTitle>
@@ -51,14 +74,30 @@ const InfoSection = ({ data, id }) => {
             <S.RichText>{cont.richText}</S.RichText>
           </S.Content>
         ))}
-        <S.Arrow left alt='arrow' src={arrow} onClick={() => setIndexSlide(indexSlide - 1)} />
-        <S.Arrow alt='arrow' src={arrow} onClick={() => setIndexSlide(indexSlide + 1)} />
-        <S.CircleWrapper>
-          <S.Circle isSelected/>
-          <S.Circle />
-          <S.Circle />
-          <S.Circle />
-        </S.CircleWrapper>
+        <S.Arrow
+          left
+          alt='arrow'
+          src={arrow}
+          onClick={
+            indexSlide <= 0 ? (
+              () => setIndexSlide(content.length - 1)
+            ) : (
+              () => setIndexSlide(indexSlide - 1)
+            )
+          }
+        />
+        <S.Arrow
+          alt='arrow'
+          src={arrow}
+          onClick={
+            indexSlide >= content.length - 1 ? (
+              () => setIndexSlide(0)
+            ) : (
+              () => setIndexSlide(indexSlide + 1)
+            )
+          }
+        />
+        <S.CircleWrapper>{getCircle()}</S.CircleWrapper>
       </S.Wrapper>
     </S.StyledContainer>
   );
