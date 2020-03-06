@@ -4,10 +4,10 @@ import { MAX_WIDTH, Gradient, BLUE } from 'config/style';
 export const Container = styled.div`
   width: 100%;
   margin: 0 auto;
-  padding: 6rem 4rem;
+  padding: 8% 4rem;
   ${Gradient};
   color: white;
-  clip-path: polygon(0 8vw,100% 0,100% 100%,0% calc(100% - 8vw));
+  clip-path: polygon(0 8vw, 100% 0, 100% 100%, 0% calc(100% - 8vw));
 `;
 
 export const Title = styled.h1`
@@ -17,6 +17,8 @@ export const Title = styled.h1`
 `;
 
 export const Content = styled.div`
+  max-width: ${MAX_WIDTH};
+  margin: 0 auto;
   line-height: 2rem;
   position: relative;
   display: flex;

@@ -39,7 +39,7 @@ const InfoSection = ({ data, id }) => {
     },
   ];
 
-  const [indexSlide, setIndexSlide] = useState(0);
+  const [ indexSlide, setIndexSlide ] = useState(0);
 
   return (
     <S.StyledContainer id={id}>
@@ -51,8 +51,14 @@ const InfoSection = ({ data, id }) => {
             <S.RichText>{cont.richText}</S.RichText>
           </S.Content>
         ))}
-        <S.Arrow left alt='arrow' src={arrow} onClick={() => setIndexSlide(indexSlide - 1)}/>
-        <S.Arrow alt='arrow' src={arrow} onClick={() => setIndexSlide(indexSlide + 1)}/>
+        <S.Arrow left alt='arrow' src={arrow} onClick={() => setIndexSlide(indexSlide - 1)} />
+        <S.Arrow alt='arrow' src={arrow} onClick={() => setIndexSlide(indexSlide + 1)} />
+        <S.CircleWrapper>
+          <S.Circle isSelected/>
+          <S.Circle />
+          <S.Circle />
+          <S.Circle />
+        </S.CircleWrapper>
       </S.Wrapper>
     </S.StyledContainer>
   );

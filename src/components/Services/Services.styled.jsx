@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { MAX_WIDTH, BOX_SHADOW, BLUE } from 'config/style';
+import { MAX_WIDTH, BOX_SHADOW, BLUE, LIGHT_BLUE } from 'config/style';
 
 export const StyledContainer = styled.div`
   padding: 20px 15px;
@@ -82,4 +82,23 @@ export const Arrow = styled.img`
   ${(props) => props.left && 'transform: rotate(180deg)'};
   width: 3rem;
   cursor: pointer;
+`;
+
+export const CircleWrapper = styled.div`
+  display: flex;
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+
+  & > *:not(:last-child) {
+    margin-right: 1rem;
+  }
+`;
+
+export const Circle = styled.div`
+  width: 1rem;
+  height: 1rem;
+  border-radius: 100%;
+  background: ${props => props.isSelected ? LIGHT_BLUE : 'none'};
+  border: 2px solid ${LIGHT_BLUE};
 `;
