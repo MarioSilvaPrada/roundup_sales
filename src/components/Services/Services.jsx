@@ -44,7 +44,9 @@ const InfoSection = ({ data, id }) => {
   const getCircle = () => {
     let circlerArr = [];
     for (let i = 0; i < content.length; i++) {
-      circlerArr.push(<S.Circle key={i} isSelected={i === indexSlide} />);
+      circlerArr.push(
+        <S.Circle key={i} isSelected={i === indexSlide} onClick={() => setIndexSlide(i)} />,
+      );
     }
     return circlerArr;
   };

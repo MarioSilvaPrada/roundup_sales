@@ -19,10 +19,15 @@ export const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
   overflow: hidden;
+
+  @media (max-width: 940px) {
+    height: 50rem;
+  }
 `;
 
 export const StyledImg = styled.img`
   width: 30rem;
+  margin: 0 2rem;
   @media (max-width: 740px) {
     width: 20rem;
   }
@@ -88,6 +93,11 @@ export const Arrow = styled.img`
   &:hover {
     transform: ${(props) => (props.left ? 'translate(-.5rem) rotate(180deg)' : 'translate(.5rem)')};
   }
+
+  @media (max-width: 940px) {
+    right: ${(props) => (props.left ? 'auto' : '1rem')};
+    left: ${(props) => (props.left ? '1rem' : 'auto')};
+  }
 `;
 
 export const CircleWrapper = styled.div`
@@ -109,4 +119,5 @@ export const Circle = styled.div`
   border-radius: 100%;
   background: ${(props) => (props.isSelected ? LIGHT_BLUE : 'none')};
   border: 2px solid ${LIGHT_BLUE};
+  cursor: pointer;
 `;
