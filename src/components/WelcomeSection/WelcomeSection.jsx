@@ -1,6 +1,5 @@
 import React from 'react';
 import * as S from 'components/WelcomeSection/WelcomeSection.styled';
-import { BLUE } from 'config/style';
 
 import Button from 'components/Button/Button';
 

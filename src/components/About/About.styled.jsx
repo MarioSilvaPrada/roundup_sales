@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { MAX_WIDTH, Gradient, BLUE } from 'config/style';
+import { MAX_WIDTH, Gradient } from 'config/style';
 
 export const Container = styled.div`
   width: 100%;

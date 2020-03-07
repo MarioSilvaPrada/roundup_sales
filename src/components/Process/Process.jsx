@@ -1,7 +1,6 @@
 import React from 'react';
 import * as S from './Process.styled';
 
-import { BLUE, LIGHT_BLUE } from 'config/style.js';
 
 import agenda from 'assets/agenda.svg';
 import strategy from 'assets/strategy.svg';
@@ -44,9 +43,11 @@ const Process = () => {
     <S.Container id='Process'>
       <S.Title>Process</S.Title>
       <S.Wrapper>
-        {processArr.map(({ img, content, name }, i) => (
-          <S.Card key={content}>
-            <S.IconWrapper><S.Icon alt='icon' src={img} /></S.IconWrapper>
+        {processArr.map(({ img, name }, i) => (
+          <S.Card key={i}>
+            <S.IconWrapper>
+              <S.Icon alt='icon' src={img} />
+            </S.IconWrapper>
             <S.Name>
               {i + 1}. {name}
             </S.Name>

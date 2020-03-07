@@ -13,6 +13,8 @@ import Footer from 'components/Footer/Footer';
 import Ebooks from 'components/Ebooks/Ebooks';
 import About from 'components/About/About';
 
+import { FaArrowUp } from 'react-icons/fa';
+
 const App = () => {
   const [ data, setData ] = useState({});
   const [ headerData, setHeaderData ] = useState({});
@@ -20,6 +22,8 @@ const App = () => {
   const [ sectionTitle, setSectionTitle ] = useState({});
   const [ topics, setTopics ] = useState({});
   const [ isLoading, setIsLoading ] = useState(true);
+
+  const [ position, setPosition ] = useState(0);
 
   useEffect(() => {
     client.getEntries().then((entries) => {
@@ -40,12 +44,29 @@ const App = () => {
     });
   }, []);
 
+
+  const onScroll = () => {
+    const positionToTop = window.pageYOffset;
+    // const other = document.getElementById('Resources').offsetTop;
+    setPosition(positionToTop);
+  };
+
+  useEffect(
+    () => {
+      window.addEventListener('scroll', onScroll);
+    },
+    [ position ],
+  );
+
+  const getPosition = position > 700;
+
   return (
     <S.StyledApp>
       {isLoading ? (
         <h1>Loading</h1>
       ) : (
         <div>
+          <Header isFixed={getPosition}/>
           <WelcomeSection data={welcomeData} id={headerData.link[0]} />
           <SectionTitle data={sectionTitle} />
           <Process />
@@ -53,6 +74,9 @@ const App = () => {
           <Ebooks />
           <About />
           <Contact />
+          <S.TopButton onClick={() => window.scrollTo(0, 0)} isVisible={getPosition}>
+            <FaArrowUp size={'2rem'} color={'white'} />
+          </S.TopButton>
           <Footer id={headerData.link} />
         </div>
       )}

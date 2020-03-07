@@ -1,9 +1,26 @@
-import styled from 'styled-components';
-import { MAX_WIDTH, BLUE } from '../../config/style';
+import styled, { css, keyframes } from 'styled-components';
+import { MAX_WIDTH, BLUE, Gradient } from '../../config/style';
+
+const animationHeader = keyframes`
+  0% { transform: translateY(-20rem); }
+  100% { transform: translateY(0); }
+`;
+
+const FixedHeader = css`
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: ${Gradient};
+  border-bottom: 1px solid white;
+  color: white;
+  animation: ${animationHeader} .3s;
+  z-index: 100;
+`;
 
 export const StyledHeader = styled.div`
   width: 100%;
-  padding: 2rem 5rem;
+  padding: 1rem 5rem;
+  ${(props) => props.isFixed && FixedHeader};
 
   @media (max-width: 940px) {
     padding: 15px;
@@ -19,7 +36,7 @@ export const StyledNavBar = styled.div`
   }
 `;
 
-export const StyledLogo = styled.img`width: 3.2rem;`;
+export const StyledLogo = styled.img`width: 3rem;`;
 
 export const StyledLink = styled.a`
   margin-left: 1rem;
@@ -47,3 +64,5 @@ export const StyledHeaderContainer = styled.div`
   align-items: center;
   max-width: ${MAX_WIDTH};
 `;
+
+export const ButtonWrapper = styled.a`display: ${props => props.isFixed ? 'block' : 'none'};`;
