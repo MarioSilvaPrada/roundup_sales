@@ -21,7 +21,7 @@ export const Wrapper = styled.div`
   overflow: hidden;
 
   @media (max-width: 940px) {
-    height: 50rem;
+    min-height: 60rem;
   }
 `;
 

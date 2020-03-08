@@ -49,7 +49,7 @@ export const StyledLink = styled.a`
   transition: .7s;
 
   &:hover {
-    border-bottom: 2px solid ${props => props.isFixed ? 'white' : BLUE};
+    border-bottom: 2px solid ${(props) => (props.isFixed ? 'white' : BLUE)};
   }
 `;
 
@@ -66,4 +66,9 @@ export const StyledHeaderContainer = styled.div`
   max-width: ${MAX_WIDTH};
 `;
 
-export const ButtonWrapper = styled.a`display: ${(props) => (props.isFixed ? 'block' : 'none')};`;
+export const ButtonWrapper = styled.a`
+  display: ${(props) => (props.isFixed ? 'block' : 'none')};
+  @media (max-width: 440px) {
+    display: none;
+  }
+`;
