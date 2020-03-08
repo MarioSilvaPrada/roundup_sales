@@ -2,9 +2,9 @@ import styled from 'styled-components';
 import { MAX_WIDTH } from '../../config/style';
 
 export const StyledContainer = styled.div`
-  padding: 2rem 5rem;
+  padding: 5rem;
   @media (max-width: 940px) {
-    padding: 15px;
+    padding: 3rem;
   }
 `;
 

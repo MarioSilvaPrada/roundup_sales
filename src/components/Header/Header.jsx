@@ -13,10 +13,10 @@ const Header = ({ isFixed }) => {
         <S.StyledLeftHeader>
           <S.StyledLogo alt='logo' src={isFixed ? logoWhite : logo} />
           <S.StyledNavBar>
-            <S.StyledLink href={'#Process'}>Process</S.StyledLink>
-            <S.StyledLink href={'#Services'}>Services</S.StyledLink>
-            <S.StyledLink href={'#Resources'}>Resources</S.StyledLink>
-            <S.StyledLink href={'#about'}>About</S.StyledLink>
+            <S.StyledLink isFixed={isFixed} href={'#Process'}>Process</S.StyledLink>
+            <S.StyledLink isFixed={isFixed} href={'#Services'}>Services</S.StyledLink>
+            <S.StyledLink isFixed={isFixed} href={'#Resources'}>Resources</S.StyledLink>
+            <S.StyledLink isFixed={isFixed} href={'#about'}>About</S.StyledLink>
           </S.StyledNavBar>
         </S.StyledLeftHeader>
         <S.ButtonWrapper href='#contact' isFixed={isFixed}>
