@@ -44,7 +44,6 @@ const App = () => {
     });
   }, []);
 
-
   const onScroll = () => {
     const positionToTop = window.pageYOffset;
     // const other = document.getElementById('Resources').offsetTop;
@@ -66,11 +65,11 @@ const App = () => {
         <h1>Loading</h1>
       ) : (
         <div>
-          <Header isFixed={getPosition}/>
+          <Header isFixed={getPosition} />
           <WelcomeSection data={welcomeData} id={headerData.link[0]} />
           <SectionTitle data={sectionTitle} />
-          <Process />
           <Services data={topics} id={headerData.link[1]} />
+          <Process />
           <Ebooks />
           <About />
           <Contact />
